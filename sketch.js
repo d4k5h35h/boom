@@ -14,16 +14,16 @@ function loaded() {
   button = createButton("Play");
   button.mousePressed(togglePlaying);
   button.position(width / 2.25, height / 1.18);
-  button.size(100,38);
+  button.size(200,50);
 }
 
 function togglePlaying() {
   if (!song.isPlaying()) {
     song.play();
-    button.html("Play");
+    button.html("Pause");
   } else {
     song.pause();
-    button.html("Pause");
+    button.html("Play");
   }
 }
 
