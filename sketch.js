@@ -8,23 +8,22 @@ function setup() {
   bgColor = random(255);
   song = loadSound("d.mp3", loaded);
   amp = new p5.Amplitude();
-
 }
 
 function loaded() {
   button = createButton("Play");
   button.mousePressed(togglePlaying);
-  button.position(width / 1.1, height / 1.1);
+  button.position(width / 2.25, height / 1.18);
+  button.size(100,38);
 }
 
 function togglePlaying() {
   if (!song.isPlaying()) {
     song.play();
-    song.setVolume(1);
-    button.html("Pause");
+    button.html("Play");
   } else {
     song.pause();
-    button.html("play");
+    button.html("Pause");
   }
 }
 
